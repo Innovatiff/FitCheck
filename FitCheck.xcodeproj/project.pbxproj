@@ -10,7 +10,6 @@
 		A1000001 /* FitCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* FitCheckApp.swift */; };
 		A1000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* ContentView.swift */; };
 		A1000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000003 /* Assets.xcassets */; };
-		A1000004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2000005 /* GoogleService-Info.plist */; };
 		A1000010 /* FitCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* FitCheckTests.swift */; };
 		A1000020 /* FitCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020 /* FitCheckUITests.swift */; };
 		A1000030 /* FitCheckUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000030 /* FitCheckUser.swift */; };
@@ -38,7 +37,7 @@
 		A2000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2000005 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2000006 /* FitCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitCheck.entitlements; sourceTree = "<group>"; };
 		A2000030 /* FitCheckUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCheckUser.swift; sourceTree = "<group>"; };
 		A2000031 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A2000032 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -79,7 +78,7 @@
 				A3000013 /* Services */,
 				A2000003 /* Assets.xcassets */,
 				A2000004 /* Info.plist */,
-				A2000005 /* GoogleService-Info.plist */,
+				A2000006 /* FitCheck.entitlements */,
 			);
 			path = FitCheck;
 			sourceTree = "<group>";
@@ -264,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000003 /* Assets.xcassets in Resources */,
-				A1000004 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitCheck/FitCheck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -481,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitcheck.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alam.fitcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -494,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitCheck/FitCheck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -506,7 +506,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitcheck.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alam.fitcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
