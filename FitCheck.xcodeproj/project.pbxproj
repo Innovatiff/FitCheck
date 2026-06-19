@@ -51,7 +51,7 @@
 		A2000039 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A2000040 /* UsernameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidatorTests.swift; sourceTree = "<group>"; };
 		A2000041 /* UsernameUniquenessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUniquenessTests.swift; sourceTree = "<group>"; };
-		A2000042 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		A2000042 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mocks/MockUserRepository.swift"; sourceTree = "<group>"; };
 		A2000009 /* FitCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2000010 /* FitCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCheckTests.swift; sourceTree = "<group>"; };
 		A2000019 /* FitCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
