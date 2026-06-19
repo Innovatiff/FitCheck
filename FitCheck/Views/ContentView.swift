@@ -1,40 +1,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var session: SessionManager
     @EnvironmentObject private var authVM: AuthViewModel
 
     var body: some View {
         Group {
-            switch authVM.state {
+            switch session.state {
             case .loading:
                 ProgressView()
                     .scaleEffect(1.4)
 
-            case .welcome:
+            case .signedOut:
                 OnboardingView()
 
-            case .usernameSelection(let firebaseUser):
+            case .needsUsername(let firebaseUser):
                 UsernameSelectionView(firebaseUser: firebaseUser)
 
-            case .authenticated(let user):
+            case .signedIn(let user):
                 MainTabView(user: user)
             }
         }
-        .animation(.easeInOut(duration: 0.3), value: stateID)
+        .animation(.easeInOut(duration: 0.3), value: session.state.stateKey)
     }
-
-    // Equatable proxy so the animation triggers on state changes.
-    private var stateID: String {
-        switch authVM.state {
-        case .loading:              return "loading"
-        case .welcome:              return "welcome"
-        case .usernameSelection:    return "username"
-        case .authenticated:        return "home"
-        }
-    }
-}
-
-#Preview {
-    ContentView()
-        .environmentObject(AuthViewModel())
 }

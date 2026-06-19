@@ -20,6 +20,12 @@
 		A1000034 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000034 /* OnboardingView.swift */; };
 		A1000035 /* UsernameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000035 /* UsernameSelectionView.swift */; };
 		A1000036 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000036 /* MainTabView.swift */; };
+		A1000037 /* UsernameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000037 /* UsernameValidator.swift */; };
+		A1000038 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000038 /* UserRepositoryProtocol.swift */; };
+		A1000039 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000039 /* SessionManager.swift */; };
+		A1000040 /* UsernameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000040 /* UsernameValidatorTests.swift */; };
+		A1000041 /* UsernameUniquenessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000041 /* UsernameUniquenessTests.swift */; };
+		A1000042 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000042 /* MockUserRepository.swift */; };
 		FB000001 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB100001 /* FirebaseAuth */; };
 		FB000002 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB100002 /* FirebaseFirestore */; };
 		FB000003 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FB100003 /* FirebaseStorage */; };
@@ -40,6 +46,12 @@
 		A2000034 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A2000035 /* UsernameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameSelectionView.swift; sourceTree = "<group>"; };
 		A2000036 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A2000037 /* UsernameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidator.swift; sourceTree = "<group>"; };
+		A2000038 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A2000039 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		A2000040 /* UsernameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidatorTests.swift; sourceTree = "<group>"; };
+		A2000041 /* UsernameUniquenessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUniquenessTests.swift; sourceTree = "<group>"; };
+		A2000042 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		A2000009 /* FitCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2000010 /* FitCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCheckTests.swift; sourceTree = "<group>"; };
 		A2000019 /* FitCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A2000030 /* FitCheckUser.swift */,
+				A2000037 /* UsernameValidator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +117,8 @@
 			children = (
 				A2000031 /* AuthService.swift */,
 				A2000032 /* FirestoreService.swift */,
+				A2000038 /* UserRepositoryProtocol.swift */,
+				A2000039 /* SessionManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -112,6 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				A2000010 /* FitCheckTests.swift */,
+				A2000040 /* UsernameValidatorTests.swift */,
+				A2000041 /* UsernameUniquenessTests.swift */,
+				A2000042 /* MockUserRepository.swift */,
 			);
 			path = FitCheckTests;
 			sourceTree = "<group>";
@@ -266,6 +284,9 @@
 				A1000034 /* OnboardingView.swift in Sources */,
 				A1000035 /* UsernameSelectionView.swift in Sources */,
 				A1000036 /* MainTabView.swift in Sources */,
+				A1000037 /* UsernameValidator.swift in Sources */,
+				A1000038 /* UserRepositoryProtocol.swift in Sources */,
+				A1000039 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000010 /* FitCheckTests.swift in Sources */,
+				A1000040 /* UsernameValidatorTests.swift in Sources */,
+				A1000041 /* UsernameUniquenessTests.swift in Sources */,
+				A1000042 /* MockUserRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
