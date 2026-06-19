@@ -106,6 +106,9 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView()
-        .environmentObject(AuthViewModel())
+    let session = SessionManager()
+    let authVM  = AuthViewModel(session: session)
+    return OnboardingView()
+        .environmentObject(session)
+        .environmentObject(authVM)
 }

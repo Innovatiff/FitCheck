@@ -3,19 +3,15 @@ import FirebaseFirestore
 
 /// Mirror of the `users/{uid}` Firestore document.
 ///
-/// Field mapping (Firestore key → Swift property):
-///   uid            → uid
-///   username       → username
-///   styleTag       → styleTag       (absent when nil)
-///   currentStreak  → currentStreak
-///   longestStreak  → longestStreak
-///   squadIds       → squadIds
-///   createdAt      → createdAt      (Firestore Timestamp)
+/// Firestore field names match Swift property names exactly:
+///   uid, username, styleTag, currentStreak, longestStreak, squadIds, createdAt
 ///
-/// `@DocumentID` captures the document path key but is never written as a field.
+/// `createdAt` is stored as a Firestore Timestamp; the SDK's Codable bridge handles conversion.
+/// `id` is decorated with `@DocumentID` so it is populated from the document path key and
+/// is never written as a body field — no custom CodingKeys required.
 struct FitCheckUser: Codable, Equatable, Identifiable {
 
-    // Document path key — populated automatically on decode, ignored on encode.
+    // Populated from the document path on decode; omitted from encoding automatically.
     @DocumentID var id: String?
 
     let uid: String
@@ -24,19 +20,7 @@ struct FitCheckUser: Codable, Equatable, Identifiable {
     var currentStreak: Int
     var longestStreak: Int
     var squadIds: [String]
-
-    // Stored as a Firestore Timestamp; FirebaseFirestore's Codable bridge handles conversion.
     let createdAt: Date
-
-    enum CodingKeys: String, CodingKey {
-        case uid
-        case username
-        case styleTag
-        case currentStreak
-        case longestStreak
-        case squadIds
-        case createdAt
-    }
 
     init(uid: String, username: String) {
         self.uid = uid

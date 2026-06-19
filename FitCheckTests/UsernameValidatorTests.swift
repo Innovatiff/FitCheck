@@ -109,7 +109,7 @@ final class UsernameValidatorTests: XCTestCase {
         line: UInt = #line
     ) {
         if case .failure(let f) = result {
-            XCTFail("Expected success but got failure: \(f.localizedDescription ?? "")", file: file, line: line)
+            XCTFail("Expected success but got failure: \(f.localizedDescription)", file: file, line: line)
         }
     }
 
