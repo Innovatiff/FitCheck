@@ -13,6 +13,13 @@
 		A1000004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2000005 /* GoogleService-Info.plist */; };
 		A1000010 /* FitCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* FitCheckTests.swift */; };
 		A1000020 /* FitCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020 /* FitCheckUITests.swift */; };
+		A1000030 /* FitCheckUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000030 /* FitCheckUser.swift */; };
+		A1000031 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000031 /* AuthService.swift */; };
+		A1000032 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000032 /* FirestoreService.swift */; };
+		A1000033 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000033 /* AuthViewModel.swift */; };
+		A1000034 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000034 /* OnboardingView.swift */; };
+		A1000035 /* UsernameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000035 /* UsernameSelectionView.swift */; };
+		A1000036 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000036 /* MainTabView.swift */; };
 		FB000001 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB100001 /* FirebaseAuth */; };
 		FB000002 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB100002 /* FirebaseFirestore */; };
 		FB000003 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FB100003 /* FirebaseStorage */; };
@@ -26,6 +33,13 @@
 		A2000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2000005 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2000030 /* FitCheckUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCheckUser.swift; sourceTree = "<group>"; };
+		A2000031 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A2000032 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		A2000033 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A2000034 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A2000035 /* UsernameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameSelectionView.swift; sourceTree = "<group>"; };
+		A2000036 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		A2000009 /* FitCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2000010 /* FitCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCheckTests.swift; sourceTree = "<group>"; };
 		A2000019 /* FitCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				A2000002 /* ContentView.swift */,
+				A2000034 /* OnboardingView.swift */,
+				A2000035 /* UsernameSelectionView.swift */,
+				A2000036 /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -69,6 +86,7 @@
 		A3000011 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A2000033 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -76,6 +94,7 @@
 		A3000012 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A2000030 /* FitCheckUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -83,6 +102,8 @@
 		A3000013 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A2000031 /* AuthService.swift */,
+				A2000032 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,6 +259,13 @@
 			files = (
 				A1000001 /* FitCheckApp.swift in Sources */,
 				A1000002 /* ContentView.swift in Sources */,
+				A1000030 /* FitCheckUser.swift in Sources */,
+				A1000031 /* AuthService.swift in Sources */,
+				A1000032 /* FirestoreService.swift in Sources */,
+				A1000033 /* AuthViewModel.swift in Sources */,
+				A1000034 /* OnboardingView.swift in Sources */,
+				A1000035 /* UsernameSelectionView.swift in Sources */,
+				A1000036 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
