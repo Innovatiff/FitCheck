@@ -10,8 +10,13 @@
 		A1000001 /* FitCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* FitCheckApp.swift */; };
 		A1000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* ContentView.swift */; };
 		A1000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000003 /* Assets.xcassets */; };
+		A1000004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2000005 /* GoogleService-Info.plist */; };
 		A1000010 /* FitCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* FitCheckTests.swift */; };
 		A1000020 /* FitCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020 /* FitCheckUITests.swift */; };
+		FB000001 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB100001 /* FirebaseAuth */; };
+		FB000002 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB100002 /* FirebaseFirestore */; };
+		FB000003 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FB100003 /* FirebaseStorage */; };
+		FB000004 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = FB100004 /* FirebaseFunctions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,7 @@
 		A2000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000005 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2000009 /* FitCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2000010 /* FitCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitCheckTests.swift; sourceTree = "<group>"; };
 		A2000019 /* FitCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +53,7 @@
 				A3000013 /* Services */,
 				A2000003 /* Assets.xcassets */,
 				A2000004 /* Info.plist */,
+				A2000005 /* GoogleService-Info.plist */,
 			);
 			path = FitCheck;
 			sourceTree = "<group>";
@@ -122,6 +129,12 @@
 			dependencies = (
 			);
 			name = FitCheck;
+			packageProductDependencies = (
+				FB100001 /* FirebaseAuth */,
+				FB100002 /* FirebaseFirestore */,
+				FB100003 /* FirebaseStorage */,
+				FB100004 /* FirebaseFunctions */,
+			);
 			productName = FitCheck;
 			productReference = A2000000 /* FitCheck.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +206,9 @@
 			);
 			mainGroup = A3000099 /* Root */;
 			productRefGroup = A3000000 /* Products */;
+			packageReferences = (
+				FB200000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -209,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000003 /* Assets.xcassets in Resources */,
+				A1000004 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +245,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB000001 /* FirebaseAuth in Frameworks */,
+				FB000002 /* FirebaseFirestore in Frameworks */,
+				FB000003 /* FirebaseStorage in Frameworks */,
+				FB000004 /* FirebaseFunctions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +572,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB200000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB100001 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB200000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FB100002 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB200000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FB100003 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB200000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		FB100004 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB200000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 	};
 	rootObject = A8000000 /* Project object */;
